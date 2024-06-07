@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  cursor: url('fishHook.png'), auto;
+}
+
+.AppBody {
+  background-color: #312845;
+  width: 100%;
+  height: 100%;
+}
+
+.fishDeathContainer{
+  position: absolute;
+}
+
+.fishDeathText{
+  pointer-events: none;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 49px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -110px;
+  margin-top: -110px;
+  font-family: "Arial Black", serif;
+  text-overflow: clip;
+}
+
+.singleFishText{
+  color: red;
+}
+
+.poemBox{
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  z-index: 2;
+  white-space: pre-line;
+  animation: Poem-move infinite 14s linear;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  user-select: none;
+  position: relative;
+}
+
+.FishHead {
+  position: fixed;
+  scale: 250%;
+  margin-top: -300px;
+  margin-left: -200px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.contentsContainer {
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-move infinite 14s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  border-radius: 6px;
+  background-color: rgba(0,0,0,0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: xxx-large;
+  cursor: url('fishHook.png'), auto;
+  color:white;
+}
+
+.cursorBox{
+  width: 2px;
+  height: 2000px;
+  color: white;
+  background-color: white;
+  position:absolute;
+}
+
+@keyframes App-logo-move {
+  0% {
+    transform: translate(-60dvw,0) rotate(-20deg);
+  }
+  25% {
+    transform: translate(-30dvw,-40%) rotate(20deg);
+  }
+  50% {
+    transform: translate(0,40%) rotate(-20deg);
+  }
+  75% {
+    transform: translate(30dvw,-40%) rotate(20deg);
+  }
+  100% {
+    transform: translate(60dvw,0) rotate(-20deg);
+  }
+}
+
+@keyframes Poem-move {
+  0% {
+    transform: translate(-75%,-60dvh);
+  }
+  10% {
+    transform: translate(-25%,-48dvh);
+  }
+  20% {
+    transform: translate(-75%,-36dvh);
+  }
+  30% {
+    transform: translate(-25%,-24dvh);
+  }
+  40% {
+    transform: translate(-75%,-12dvh);
+  }
+  50% {
+    transform: translate(-25%,0);
+  }
+  60% {
+    transform: translate(-75%,12dvh);
+  }
+  70% {
+    transform: translate(-25%,24dvh);
+  }
+  80% {
+    transform: translate(-75%,36dvh);
+  }
+  90% {
+    transform: translate(-25%,48dvh);
+  }
+  100%{
+    transform: translate(-75%,60dvh);
+  }
+}
